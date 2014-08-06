@@ -109,7 +109,7 @@ hb_shape_plan_create (hb_face_t                     *face,
 
   if (unlikely (!face))
     face = hb_face_get_empty ();
-  if (unlikely (!props || hb_object_is_inert (face)))
+  if (unlikely (!props))
     return hb_shape_plan_get_empty ();
   if (num_user_features && !(features = (hb_feature_t *) malloc (num_user_features * sizeof (hb_feature_t))))
     return hb_shape_plan_get_empty ();
@@ -272,7 +272,6 @@ hb_shape_plan_execute (hb_shape_plan_t    *shape_plan,
 		       unsigned int        num_features)
 {
   if (unlikely (hb_object_is_inert (shape_plan) ||
-		hb_object_is_inert (font) ||
 		hb_object_is_inert (buffer)))
     return false;
 
@@ -424,6 +423,10 @@ retry:
   /* Not found. */
 
   hb_shape_plan_t *shape_plan = hb_shape_plan_create (face, props, user_features, num_user_features, shaper_list);
+
+  /* Don't add to the cache if face is inert. */
+  if (unlikely (hb_object_is_inert (face)))
+    return shape_plan;
 
   /* Don't add the plan to the cache if there were user features with non-global ranges */
 
