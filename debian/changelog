@@ -1,3 +1,9 @@
+harfbuzz (1.4.6-1) Seznam; urgency=low
+
+  * use szn-libfreetype-dev
+
+ -- Jiri Drbalek <jiri.drbalek@firma.seznam.cz>  Mon, 17 Jul 2017 14:30:04 +0200
+
 harfbuzz (1.4.6) Seznam; urgency=low
 
   * The latest upstream version.
