@@ -1,0 +1,86 @@
+Source: harfbuzz
+Section: libs
+Priority: optional
+Maintainer: أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>
+Uploaders: Emilio Pozuelo Monfort <pochu@debian.org>
+Standards-Version: 3.9.5
+Build-Depends:
+ debhelper (>= 9~),
+ pkg-config,
+ libglib2.0-dev,
+ libcairo2-dev,
+ libfreetype6-dev,
+ libicu-dev,
+ libgraphite2-dev,
+ libgirepository1.0-dev (>= 1.31.0-2),
+ gtk-doc-tools (>= 1.15),
+ dh-autoreconf,
+Homepage: http://www.freedesktop.org/wiki/Software/HarfBuzz
+Vcs-Git: git://anonscm.debian.org/collab-maint/harfbuzz.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/harfbuzz.git
+
+Package: szn-libharfbuzz
+Architecture: any
+Multi-Arch: same
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Conflicts: libharfbuzz0, libharfbuzz0a, libharfbuzz0b
+Replaces: libharfbuzz0, libharfbuzz0a, libharfbuzz0b
+Pre-Depends: ${misc:Pre-Depends}
+Description: OpenType text shaping engine (shared library)
+ HarfBuzz is an implementation of the OpenType Layout engine (aka layout
+ engine) and the script-specific logic (aka shaping engine).
+ .
+ This package contains the shared libraries.
+
+Package: szn-libharfbuzz-icu
+Architecture: any
+Multi-Arch: same
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Pre-Depends: ${misc:Pre-Depends}
+Description: OpenType text shaping engine ICU backend
+ HarfBuzz is an implementation of the OpenType Layout engine (aka layout
+ engine) and the script-specific logic (aka shaping engine).
+ .
+ This package contains the ICU backend.
+
+Package: szn-libharfbuzz-dev
+Architecture: any
+Section: libdevel
+Depends: ${misc:Depends}, szn-libharfbuzz(= ${binary:Version}), szn-libharfbuzz-icu (= ${binary:Version})
+Description: Development files for OpenType text shaping engine
+ HarfBuzz is an implementation of the OpenType Layout engine (aka layout
+ engine) and the script-specific logic (aka shaping engine).
+ .
+ This package contains the header files and static libraries for the
+ HarfBuzz library.
+
+Package: szn-libharfbuzz-bin
+Architecture: any
+Section: utils
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: OpenType text shaping engine (utility)
+ HarfBuzz is an implementation of the OpenType Layout engine (aka layout
+ engine) and the script-specific logic (aka shaping engine).
+ .
+ This package contains a command line interface for the HarfBuzz library.
+
+Package: szn-libharfbuzz-doc
+Section: doc
+Architecture: all
+Depends: ${misc:Depends}
+Multi-Arch: foreign
+Description: Documentation files for the HarfBuzz library
+ HarfBuzz is an implementation of the OpenType Layout engine (aka layout
+ engine) and the script-specific logic (aka shaping engine).
+ .
+ This package contains the HTML documentation for the HarfBuzz library.
+
+Package: szn-libharfbuzz-udeb
+Package-Type: udeb
+Architecture: any
+Section: debian-installer
+Priority: extra
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: OpenType text shaping engine
+ HarfBuzz is an implementation of the OpenType Layout engine (aka layout
+ engine) and the script-specific logic (aka shaping engine).

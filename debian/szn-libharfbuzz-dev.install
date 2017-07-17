@@ -1,0 +1,9 @@
+usr/include/harfbuzz/
+#usr/lib/*/libharfbuzz.a
+usr/lib/*/libharfbuzz.so
+usr/lib/*/libharfbuzz-icu.so
+#usr/lib/*/libharfbuzz-gobject.so
+usr/lib/*/pkgconfig/harfbuzz.pc
+usr/lib/*/pkgconfig/harfbuzz-icu.pc
+#usr/lib/*/pkgconfig/harfbuzz-gobject.pc
+#usr/share/gir-*/*.gir
