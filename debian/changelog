@@ -1,3 +1,9 @@
+harfbuzz (1.4.6) Seznam; urgency=low
+
+  * The latest upstream version.
+
+ -- Jiri Drbalek <jiri.drbalek@firma.seznam.cz>  Mon, 17 Jul 2017 10:17:58 +0200
+
 harfbuzz (0.9.35-1) unstable; urgency=medium
 
   * New upstream release.

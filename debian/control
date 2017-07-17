@@ -13,7 +13,6 @@ Build-Depends:
  libicu-dev,
  libgraphite2-dev,
  libgirepository1.0-dev (>= 1.31.0-2),
- gtk-doc-tools (>= 1.15),
  dh-autoreconf,
 Homepage: http://www.freedesktop.org/wiki/Software/HarfBuzz
 Vcs-Git: git://anonscm.debian.org/collab-maint/harfbuzz.git
@@ -63,24 +62,3 @@ Description: OpenType text shaping engine (utility)
  engine) and the script-specific logic (aka shaping engine).
  .
  This package contains a command line interface for the HarfBuzz library.
-
-Package: szn-libharfbuzz-doc
-Section: doc
-Architecture: all
-Depends: ${misc:Depends}
-Multi-Arch: foreign
-Description: Documentation files for the HarfBuzz library
- HarfBuzz is an implementation of the OpenType Layout engine (aka layout
- engine) and the script-specific logic (aka shaping engine).
- .
- This package contains the HTML documentation for the HarfBuzz library.
-
-Package: szn-libharfbuzz-udeb
-Package-Type: udeb
-Architecture: any
-Section: debian-installer
-Priority: extra
-Depends: ${misc:Depends}, ${shlibs:Depends}
-Description: OpenType text shaping engine
- HarfBuzz is an implementation of the OpenType Layout engine (aka layout
- engine) and the script-specific logic (aka shaping engine).
