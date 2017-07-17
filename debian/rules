@@ -14,6 +14,6 @@ override_dh_autoreconf:
 	gtkdocize --copy
 	dh_autoreconf
 
-override_dh_auto_test:
-	echo "Tests disabled"
+#override_dh_auto_test:
+	#echo "Tests disabled"
 
