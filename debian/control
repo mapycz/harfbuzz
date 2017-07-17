@@ -15,7 +15,8 @@ Build-Depends:
  libgirepository1.0-dev (>= 1.31.0-2),
  dh-autoreconf,
  gtk-doc-tools,
- ragel
+ ragel,
+ szn-libfreetype-dev
 Homepage: http://www.freedesktop.org/wiki/Software/HarfBuzz
 Vcs-Git: git://anonscm.debian.org/collab-maint/harfbuzz.git
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/harfbuzz.git

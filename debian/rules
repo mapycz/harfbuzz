@@ -7,6 +7,11 @@ export DH_VERBOSE=1
 # a build fails
 export VERBOSE=1
 
+export FREETYPE_CFLAGS=-I/opt/szn/include/freetype2
+export FREETYPE_LIBS=/opt/szn/lib/libfreetype.a
+export LDFLAGS=-lpng
+
+
 %:
 	dh $@ --with autoreconf
 
