@@ -1,3 +1,0 @@
-[submodule "debian"]
-	path = debian
-	url = git@github.com:mapycz/harfbuzz-debian.git
